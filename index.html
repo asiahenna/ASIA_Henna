@@ -3,76 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asia Henna | Luxury Henna Art Charlotte NC</title>
+
+<title>Asia Henna | Charlotte NC</title>
 
 <style>
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#120806;
-    color:white;
+margin:0;
+font-family:Arial, sans-serif;
+background:#120806;
+color:white;
 }
 
-/* Header */
 header{
-    text-align:center;
-    padding:40px 20px;
+text-align:center;
+padding:40px 20px;
 }
 
 h1{
-    color:#d4af37;
-    font-size:40px;
-    margin-bottom:10px;
+color:#d4af37;
+font-size:42px;
+margin:0;
 }
 
-/* Gallery */
+p{
+opacity:0.9;
+}
+
 .gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-    gap:10px;
-    padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:10px;
+padding:20px;
 }
+
 .gallery img{
-    width:100%;
-    border-radius:12px;
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:12px;
 }
 
-/* Pricing */
+.section-title{
+text-align:center;
+color:#d4af37;
+margin-top:30px;
+}
+
 .price-box{
-    background:#1b1b1b;
-    padding:20px;
-    margin:10px;
-    border-radius:12px;
+background:#1b1b1b;
+padding:18px;
+margin:10px 20px;
+border-radius:12px;
 }
 
-/* Booking */
 .booking{
-    text-align:center;
-    padding:30px;
+text-align:center;
+padding:40px 20px;
 }
 
-.button{
-    display:inline-block;
-    padding:15px 25px;
-    margin:10px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
+.btn{
+display:inline-block;
+padding:15px 22px;
+margin:10px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
 }
 
-/* WhatsApp Button */
 .whatsapp{
-    background:#25D366;
-    color:white;
+background:#25D366;
+color:white;
 }
 
-/* Email Button */
 .email{
-    background:#d4af37;
-    color:black;
+background:#d4af37;
+color:black;
+}
+
+footer{
+text-align:center;
+padding:30px;
+opacity:0.8;
 }
 </style>
-
 </head>
 
 <body>
@@ -82,7 +95,9 @@ h1{
 <p>Luxury Henna Art in Charlotte, NC</p>
 </header>
 
-<section class="gallery">
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
 <img src="IMG_9585.jpeg">
 <img src="IMG_9586.jpeg">
 <img src="IMG_9587.jpeg">
@@ -93,47 +108,33 @@ h1{
 <img src="IMG_9593.jpeg">
 <img src="IMG_9594.jpeg">
 <img src="IMG_9595.jpeg">
-</section>
-
-<section>
-<h2 style="text-align:center;">Pricing</h2>
-
-<div class="price-box">
-<h3>Hand Henna</h3>
-<p>Custom pricing available</p>
 </div>
 
-<div class="price-box">
-<h3>Leg Henna</h3>
-<p>Custom pricing available</p>
-</div>
+<h2 class="section-title">Pricing</h2>
 
-<div class="price-box">
-<h3>Bridal Henna</h3>
-<p>Contact for quote</p>
-</div>
-</section>
+<div class="price-box">Hand Henna - Custom pricing</div>
+<div class="price-box">Leg Henna - Custom pricing</div>
+<div class="price-box">Bridal Henna - Contact for quote</div>
 
-<section class="booking">
-<h2>Book Now</h2>
+<h2 class="section-title">Book Appointment</h2>
 
-<!-- WhatsApp Booking Button -->
-<a class="button whatsapp"
+<div class="booking">
+
+<a class="btn whatsapp"
 href="https://wa.me/17046616428?text=Hi%20I%20want%20to%20book%20a%20henna%20appointment"
 target="_blank">
 Book on WhatsApp
 </a>
 
-<!-- Email Backup -->
-<a class="button email"
+<a class="btn email"
 href="mailto:asia.henna247@gmail.com">
-Send Email
+Email Me
 </a>
-</section>
 
-<footer style="text-align:center;padding:20px;">
-<p>Asia Henna ❤️</p>
-<p>Charlotte, NC</p>
+</div>
+
+<footer>
+Asia Henna ❤️ | Charlotte, NC
 </footer>
 
 </body>
