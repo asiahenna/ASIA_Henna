@@ -3,205 +3,312 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asia Henna | Luxury Henna Art</title>
+
+<title>Asia Henna | Luxury Henna Artist Charlotte NC</title>
 
 <style>
+
+*{
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
 body{
 margin:0;
-font-family:Arial, sans-serif;
-background:#0f0f0f;
+font-family:'Arial',sans-serif;
+background:#140b08;
 color:white;
 }
 
 header{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:60px 20px;
-background:black;
+padding:30px;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),
+url("IMG_9585.jpeg");
+background-size:cover;
+background-position:center;
 }
 
-h1{
-color:#d4af37;
-font-size:40px;
+.logo{
+font-size:55px;
+color:#e8b84a;
+font-weight:bold;
+}
+
+.tagline{
+font-size:22px;
+}
+
+.button{
+display:inline-block;
+margin:10px;
+padding:15px 30px;
+border-radius:30px;
+background:#e8b84a;
+color:#140b08;
+text-decoration:none;
+font-weight:bold;
+}
+
+.button:hover{
+transform:scale(1.05);
 }
 
 section{
-padding:40px 20px;
-max-width:1000px;
+padding:50px 20px;
+max-width:1100px;
 margin:auto;
 }
 
 h2{
-color:#d4af37;
 text-align:center;
+color:#e8b84a;
+font-size:35px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
+}
+
+.card{
+background:#24120d;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px #000;
+}
+
+.card h3{
+color:#e8b84a;
 }
 
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:10px;
+gap:15px;
 }
 
 .gallery img{
 width:100%;
-border-radius:10px;
-cursor:pointer;
-transition:0.3s;
+height:220px;
+object-fit:cover;
+border-radius:20px;
 }
 
-.gallery img:hover{
-transform:scale(1.05);
+.booking{
+background:#24120d;
+padding:30px;
+border-radius:25px;
 }
 
-.price-box{
-background:#1b1b1b;
-padding:15px;
-margin:10px 0;
-border-radius:10px;
-text-align:center;
-}
-
-.button{
-display:inline-block;
-background:#d4af37;
-color:black;
-padding:12px 18px;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-margin:5px;
-}
-
-.center{
-text-align:center;
-}
-
-input, select{
+input,select{
 width:100%;
-padding:10px;
-margin:5px 0;
-border-radius:5px;
+padding:15px;
+margin:8px 0;
+border-radius:10px;
 border:none;
 }
 
-form{
-background:#1b1b1b;
-padding:20px;
-border-radius:10px;
+footer{
+text-align:center;
+padding:30px;
+color:#aaa;
 }
 
-#popup{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-display:none;
-align-items:center;
-justify-content:center;
-}
-
-#popup img{
-max-width:90%;
-max-height:90%;
-}
 </style>
+
 </head>
+
 
 <body>
 
-<header>
-<h1>Asia Henna</h1>
-<p>Luxury Henna Art in Charlotte, NC</p>
 
-<a class="button" href="https://wa.me/17046616428" target="_blank">
-📲 Book on WhatsApp
+<header>
+
+<div class="logo">
+Asia Henna
+</div>
+
+<p class="tagline">
+✨ Luxury Henna Designs For Every Special Moment ✨
+</p>
+
+<p>
+Charlotte, North Carolina
+</p>
+
+
+<a class="button" href="mailto:asia.henna247@gmail.com">
+Book Appointment
 </a>
+
+
+<a class="button" href="tel:7046616428">
+Call Now
+</a>
+
+
 </header>
 
-<section>
-<h2>Gallery</h2>
-<div class="gallery">
 
-<img src="IMG_9585.jpeg" onclick="openImg(this.src)">
-<img src="IMG_9586.jpeg" onclick="openImg(this.src)">
-<img src="IMG_9587.jpeg" onclick="openImg(this.src)">
-<img src="IMG_9588.jpeg" onclick="openImg(this.src)">
-<img src="IMG_9589.jpeg" onclick="openImg(this.src)">
-<img src="IMG_9590.jpeg" onclick="openImg(this.src)">
-<img src="IMG_9592.jpeg" onclick="openImg(this.src)">
-<img src="IMG_9593.jpeg" onclick="openImg(this.src)">
-<img src="IMG_9594.jpeg" onclick="openImg(this.src)">
-<img src="IMG_9595.jpeg" onclick="openImg(this.src)">
+
+<section>
+
+<h2>Why Choose Asia Henna?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>✨ Custom Designs</h3>
+<p>Unique henna artwork created specially for you.</p>
+</div>
+
+
+<div class="card">
+<h3>💍 Bridal Henna</h3>
+<p>Beautiful detailed designs for your unforgettable day.</p>
+</div>
+
+
+<div class="card">
+<h3>🌿 Natural Henna</h3>
+<p>Traditional art with a luxury experience.</p>
+</div>
+
 
 </div>
+
 </section>
 
+
+
+
 <section>
+
+<h2>Our Gallery</h2>
+
+<div class="gallery">
+
+<img src="IMG_9585.jpeg">
+<img src="IMG_9586.jpeg">
+<img src="IMG_9587.jpeg">
+<img src="IMG_9588.jpeg">
+<img src="IMG_9589.jpeg">
+<img src="IMG_9590.jpeg">
+<img src="IMG_9592.jpeg">
+<img src="IMG_9593.jpeg">
+<img src="IMG_9594.jpeg">
+<img src="IMG_9595.jpeg">
+
+</div>
+
+</section>
+
+
+
+
+<section>
+
 <h2>Pricing</h2>
 
-<div class="price-box">One Hand - $25</div>
-<div class="price-box">Two Hands - $40</div>
-<div class="price-box">Full Hand - $30 each</div>
-<div class="price-box">Full Package (Hands + Legs) - $60</div>
-<div class="price-box">Custom Design - $35 per hand</div>
-<div class="price-box">Custom Leg Design - $20 per leg</div>
+
+<div class="cards">
+
+
+<div class="card">
+<h3>One Hand</h3>
+<p>$25</p>
+</div>
+
+
+<div class="card">
+<h3>Two Hands</h3>
+<p>$40</p>
+</div>
+
+
+<div class="card">
+<h3>Full Hand</h3>
+<p>$30 Each Hand</p>
+</div>
+
+
+<div class="card">
+<h3>Hands + Legs Package</h3>
+<p>$60</p>
+</div>
+
+
+<div class="card">
+<h3>Custom Designs</h3>
+<p>$35 Per Hand<br>$20 Per Leg</p>
+</div>
+
+
+</div>
 
 </section>
 
+
+
+
 <section>
-<h2>Book Appointment</h2>
 
-<form onsubmit="sendBooking(event)">
-<input id="name" placeholder="Full Name" required>
-<input id="phone" placeholder="Phone Number" required>
-<input id="date" type="date" required>
+<h2>Book Your Appointment</h2>
 
-<select id="service">
+
+<div class="booking">
+
+<form action="mailto:asia.henna247@gmail.com">
+
+<input placeholder="Your Name">
+
+<input placeholder="Phone Number">
+
+<input type="date">
+
+<select>
+<option>Select Service</option>
 <option>One Hand</option>
 <option>Two Hands</option>
-<option>Full Package</option>
+<option>Bridal Henna</option>
 <option>Custom Design</option>
 </select>
 
-<button class="button" type="submit">Submit Booking</button>
+
+<button class="button">
+Send Booking Request
+</button>
+
+
 </form>
 
-</section>
-
-<section class="center">
-<h2>Contact</h2>
-
-<a class="button" href="mailto:asia.henna247@gmail.com">
-📧 Email Now
-</a>
-
-</section>
-
-<div id="popup" onclick="closeImg()">
-<img id="popupImg">
 </div>
 
-<script>
-function openImg(src){
-document.getElementById("popup").style.display="flex";
-document.getElementById("popupImg").src=src;
-}
 
-function closeImg(){
-document.getElementById("popup").style.display="none";
-}
+</section>
 
-function sendBooking(e){
-e.preventDefault();
 
-alert("Booking sent! Asia Henna will contact you soon.");
 
-document.getElementById("name").value="";
-document.getElementById("phone").value="";
-document.getElementById("date").value="";
-}
-</script>
+
+<footer>
+
+Asia Henna ❤️  
+<br>
+704-661-6428  
+<br>
+Charlotte, NC
+
+</footer>
+
 
 </body>
 </html>
