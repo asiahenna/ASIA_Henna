@@ -7,6 +7,7 @@
 <title>Asia Henna | Charlotte NC</title>
 
 <style>
+
 body{
 margin:0;
 font-family:Arial, sans-serif;
@@ -23,10 +24,6 @@ h1{
 color:#d4af37;
 font-size:42px;
 margin:0;
-}
-
-p{
-opacity:0.9;
 }
 
 .gallery{
@@ -58,26 +55,53 @@ border-radius:12px;
 
 .booking{
 text-align:center;
-padding:40px 20px;
+padding:30px 20px;
 }
 
-.btn{
-display:inline-block;
-padding:15px 22px;
-margin:10px;
+input,select,textarea{
+width:100%;
+padding:14px;
+margin:8px 0;
 border-radius:10px;
-text-decoration:none;
-font-weight:bold;
+border:none;
 }
 
-.whatsapp{
+button{
+width:100%;
+padding:15px;
+border-radius:10px;
+border:none;
+background:#d4af37;
+font-weight:bold;
+cursor:pointer;
+}
+
+.badge{
 background:#25D366;
 color:white;
+padding:8px 15px;
+border-radius:20px;
+font-size:13px;
+display:inline-block;
+margin-bottom:10px;
 }
 
-.email{
-background:#d4af37;
-color:black;
+.urgent{
+color:#d4af37;
+text-align:center;
+margin-bottom:10px;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
 }
 
 footer{
@@ -85,6 +109,7 @@ text-align:center;
 padding:30px;
 opacity:0.8;
 }
+
 </style>
 </head>
 
@@ -112,30 +137,78 @@ opacity:0.8;
 
 <h2 class="section-title">Pricing</h2>
 
-<div class="price-box">Hand Henna - Custom pricing</div>
-<div class="price-box">Leg Henna - Custom pricing</div>
-<div class="price-box">Bridal Henna - Contact for quote</div>
+<div class="price-box">Hand Henna - $25+</div>
+<div class="price-box">Leg Henna - $20+</div>
+<div class="price-box">Bridal Henna - Custom Quote</div>
 
-<h2 class="section-title">Book Appointment</h2>
+<h2 class="section-title">Request Booking</h2>
 
 <div class="booking">
 
-<a class="btn whatsapp"
-href="https://wa.me/17046616428?text=Hi%20I%20want%20to%20book%20a%20henna%20appointment"
-target="_blank">
-Book on WhatsApp
-</a>
+<div class="badge">⚡ Instant WhatsApp Booking Active</div>
+<div class="urgent">🔥 Limited availability — book early</div>
 
-<a class="btn email"
-href="mailto:asia.henna247@gmail.com">
-Email Me
-</a>
+<form onsubmit="sendBooking(event)">
 
+<input id="name" placeholder="Your Name" required>
+<input id="phone" placeholder="Phone Number" required>
+
+<select id="service" required>
+<option value="">Select Service</option>
+<option>Hand Henna</option>
+<option>Leg Henna</option>
+<option>Bridal Henna</option>
+<option>Event Henna</option>
+</select>
+
+<input type="date" id="date" required>
+<input type="time" id="time" required>
+
+<textarea id="message" placeholder="Notes"></textarea>
+
+<button type="submit">Send Booking Request</button>
+
+</form>
 </div>
 
 <footer>
-Asia Henna ❤️ | Charlotte, NC
+Asia Henna ❤️ | Charlotte, NC<br>
+📞 704-661-6428<br>
+📧 asia.henna247@gmail.com
 </footer>
+
+<a class="whatsapp-float"
+href="https://wa.me/17046616428?text=Hi%20I%20want%20to%20book%20henna"
+target="_blank">
+WhatsApp
+</a>
+
+<script>
+function sendBooking(e){
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let service=document.getElementById("service").value;
+let date=document.getElementById("date").value;
+let time=document.getElementById("time").value;
+let message=document.getElementById("message").value;
+
+let text=
+`✨ Asia Henna Booking Request ✨%0A%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Service: ${service}%0A
+Date: ${date}%0A
+Time: ${time}%0A
+Notes: ${message}`;
+
+window.open(
+"https://wa.me/17046616428?text=" + text,
+"_blank"
+);
+}
+</script>
 
 </body>
 </html>
