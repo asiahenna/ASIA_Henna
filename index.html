@@ -4,199 +4,264 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Asia Henna | Luxury Henna Artist Charlotte NC</title>
+<title>Asia Henna | Luxury Henna Artist Charlotte NC | Bridal Mehndi</title>
+
+<meta name="description" content="Luxury henna artist in Charlotte, NC. Bridal henna, custom designs, and traditional mehndi art. Book Asia Henna today.">
 
 <style>
 
-*{
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
 body{
 margin:0;
-font-family:'Arial',sans-serif;
-background:#140b08;
+font-family:Arial, sans-serif;
+background:#0e0706;
 color:white;
 }
 
-header{
-min-height:90vh;
+/* ANIMATION */
+.fade{
+opacity:0;
+transform:translateY(30px);
+animation:fadeIn 1s forwards;
+}
+
+@keyframes fadeIn{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* HERO */
+.hero{
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:30px;
 background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.85)),
 url("IMG_9585.jpeg");
 background-size:cover;
 background-position:center;
+padding:20px;
 }
 
-.logo{
-font-size:55px;
-color:#e8b84a;
-font-weight:bold;
+.hero h1{
+font-size:70px;
+color:#f2c14e;
+margin:0;
 }
 
-.tagline{
+.hero p{
 font-size:22px;
+opacity:0.9;
+max-width:600px;
 }
 
-.button{
-display:inline-block;
-margin:10px;
-padding:15px 30px;
-border-radius:30px;
-background:#e8b84a;
-color:#140b08;
+.btn{
+background:#f2c14e;
+color:#0e0706;
+padding:14px 28px;
+border-radius:40px;
 text-decoration:none;
 font-weight:bold;
+margin:10px;
+display:inline-block;
+transition:0.3s;
 }
 
-.button:hover{
-transform:scale(1.05);
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px #f2c14e;
 }
 
+/* SECTIONS */
 section{
-padding:50px 20px;
+padding:70px 20px;
 max-width:1100px;
 margin:auto;
 }
 
 h2{
 text-align:center;
-color:#e8b84a;
-font-size:35px;
+color:#f2c14e;
+font-size:40px;
 }
 
-.cards{
+/* GRID */
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:20px;
 }
 
+/* CARDS */
 .card{
-background:#24120d;
+background:#1c0e0b;
 padding:25px;
-border-radius:20px;
+border-radius:18px;
 text-align:center;
-box-shadow:0 0 20px #000;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
 }
 
 .card h3{
-color:#e8b84a;
+color:#f2c14e;
 }
 
+/* GALLERY */
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:12px;
 }
 
 .gallery img{
 width:100%;
-height:220px;
+height:230px;
 object-fit:cover;
-border-radius:20px;
+border-radius:15px;
+transition:0.3s;
 }
 
-.booking{
-background:#24120d;
-padding:30px;
-border-radius:25px;
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+/* PRICING */
+.price{
+background:#1c0e0b;
+padding:25px;
+border-radius:18px;
+text-align:center;
+border:1px solid #f2c14e33;
+}
+
+/* BOOKING */
+form{
+background:#1c0e0b;
+padding:25px;
+border-radius:20px;
 }
 
 input,select{
 width:100%;
-padding:15px;
+padding:14px;
 margin:8px 0;
-border-radius:10px;
 border:none;
+border-radius:10px;
 }
 
+button{
+width:100%;
+padding:15px;
+background:#f2c14e;
+border:none;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+transform:scale(1.03);
+}
+
+/* SOCIAL PROOF */
+.reviews{
+text-align:center;
+opacity:0.85;
+font-style:italic;
+}
+
+/* FOOTER */
 footer{
 text-align:center;
 padding:30px;
-color:#aaa;
+opacity:0.7;
+}
+
+/* FLOAT BUTTONS */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.bookfloat{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#f2c14e;
+color:black;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
 }
 
 </style>
-
 </head>
-
 
 <body>
 
+<!-- HERO -->
+<div class="hero fade">
+<h1>Asia Henna</h1>
+<p>Luxury Bridal Henna & Custom Mehndi Art in Charlotte, NC ✨</p>
 
-<header>
-
-<div class="logo">
-Asia Henna
+<a class="btn" href="#book">Book Now</a>
+<a class="btn" href="tel:7046616428">Call Now</a>
 </div>
 
-<p class="tagline">
-✨ Luxury Henna Designs For Every Special Moment ✨
-</p>
+<!-- ABOUT -->
+<section class="fade">
+<h2>Why Clients Choose Us</h2>
 
-<p>
-Charlotte, North Carolina
-</p>
-
-
-<a class="button" href="mailto:asia.henna247@gmail.com">
-Book Appointment
-</a>
-
-
-<a class="button" href="tel:7046616428">
-Call Now
-</a>
-
-
-</header>
-
-
-
-<section>
-
-<h2>Why Choose Asia Henna?</h2>
-
-<div class="cards">
+<div class="grid">
 
 <div class="card">
-<h3>✨ Custom Designs</h3>
-<p>Unique henna artwork created specially for you.</p>
+<h3>Luxury Experience</h3>
+<p>Not just henna — a full beauty experience.</p>
 </div>
-
 
 <div class="card">
-<h3>💍 Bridal Henna</h3>
-<p>Beautiful detailed designs for your unforgettable day.</p>
+<h3>Bridal Specialist</h3>
+<p>Elegant, detailed bridal mehndi designs.</p>
 </div>
-
 
 <div class="card">
-<h3>🌿 Natural Henna</h3>
-<p>Traditional art with a luxury experience.</p>
+<h3>Natural Henna</h3>
+<p>Safe, organic, traditional henna paste.</p>
 </div>
 
-
 </div>
-
 </section>
 
+<!-- REVIEWS -->
+<section class="fade">
+<h2>Client Love ❤️</h2>
+<p class="reviews">
+“Absolutely beautiful work — I got so many compliments!”<br>
+“Best henna artist in Charlotte!”<br>
+“So professional and talented!”
+</p>
+</section>
 
-
-
-<section>
-
-<h2>Our Gallery</h2>
+<!-- GALLERY -->
+<section class="fade">
+<h2>Gallery</h2>
 
 <div class="gallery">
-
 <img src="IMG_9585.jpeg">
 <img src="IMG_9586.jpeg">
 <img src="IMG_9587.jpeg">
@@ -207,108 +272,72 @@ Call Now
 <img src="IMG_9593.jpeg">
 <img src="IMG_9594.jpeg">
 <img src="IMG_9595.jpeg">
-
 </div>
-
 </section>
 
-
-
-
-<section>
-
+<!-- PRICING -->
+<section class="fade">
 <h2>Pricing</h2>
 
+<div class="grid">
 
-<div class="cards">
-
-
-<div class="card">
+<div class="price">
 <h3>One Hand</h3>
 <p>$25</p>
 </div>
 
-
-<div class="card">
+<div class="price">
 <h3>Two Hands</h3>
 <p>$40</p>
 </div>
 
-
-<div class="card">
-<h3>Full Hand</h3>
-<p>$30 Each Hand</p>
-</div>
-
-
-<div class="card">
-<h3>Hands + Legs Package</h3>
+<div class="price">
+<h3>Full Arms</h3>
 <p>$60</p>
 </div>
 
-
-<div class="card">
-<h3>Custom Designs</h3>
-<p>$35 Per Hand<br>$20 Per Leg</p>
+<div class="price">
+<h3>Bridal Package</h3>
+<p>Custom Quote</p>
 </div>
 
-
 </div>
-
 </section>
 
-
-
-
-<section>
-
+<!-- BOOKING -->
+<section id="book" class="fade">
 <h2>Book Your Appointment</h2>
 
+<form action="https://formsubmit.co/asia.henna247@gmail.com" method="POST">
 
-<div class="booking">
+<input type="hidden" name="_subject" value="New Henna Booking Request!">
+<input type="hidden" name="_captcha" value="false">
 
-<form action="mailto:asia.henna247@gmail.com">
+<input name="name" placeholder="Your Name" required>
+<input name="phone" placeholder="Phone Number" required>
+<input type="date" name="date" required>
 
-<input placeholder="Your Name">
-
-<input placeholder="Phone Number">
-
-<input type="date">
-
-<select>
+<select name="service" required>
 <option>Select Service</option>
 <option>One Hand</option>
 <option>Two Hands</option>
-<option>Bridal Henna</option>
-<option>Custom Design</option>
+<option>Full Arms</option>
+<option>Bridal</option>
 </select>
 
-
-<button class="button">
-Send Booking Request
-</button>
-
+<button type="submit">Send Booking Request</button>
 
 </form>
-
-</div>
-
-
 </section>
 
-
-
-
 <footer>
-
-Asia Henna ❤️  
-<br>
-704-661-6428  
-<br>
-Charlotte, NC
-
+<p>Asia Henna ❤️ Charlotte, NC</p>
+<p>📞 704-661-6428</p>
+<p>📧 asia.henna247@gmail.com</p>
 </footer>
 
+<a class="whatsapp" href="https://wa.me/17046616428">WhatsApp</a>
+<a class="bookfloat" href="#book">Book</a>
 
 </body>
 </html>
