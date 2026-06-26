@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Asia Henna | Charlotte NC</title>
 
 <style>
-
 body{
 margin:0;
 font-family:Arial, sans-serif;
@@ -15,22 +13,62 @@ background:#120806;
 color:white;
 }
 
-header{
+/* HERO */
+.hero{
 text-align:center;
-padding:40px 20px;
+padding:60px 20px;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+url("IMG_9585.jpeg");
+background-size:cover;
+background-position:center;
 }
 
-h1{
+.hero h1{
+font-size:50px;
 color:#d4af37;
-font-size:42px;
 margin:0;
 }
 
+.hero p{
+font-size:18px;
+opacity:0.9;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+padding:14px 25px;
+margin-top:15px;
+border-radius:30px;
+background:linear-gradient(45deg,#d4af37,#ffdd77);
+color:black;
+font-weight:bold;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* SECTIONS */
+section{
+padding:50px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+.title{
+text-align:center;
+color:#d4af37;
+font-size:32px;
+}
+
+/* GALLERY */
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
 gap:10px;
-padding:20px;
 }
 
 .gallery img{
@@ -40,27 +78,18 @@ object-fit:cover;
 border-radius:12px;
 }
 
-.section-title{
-text-align:center;
-color:#d4af37;
-margin-top:30px;
-}
-
-.price-box{
-background:#1b1b1b;
-padding:18px;
-margin:10px 20px;
+/* PRICING */
+.price{
+background:#1b0d09;
+padding:15px;
+margin:10px 0;
 border-radius:12px;
 }
 
-.booking{
-text-align:center;
-padding:30px 20px;
-}
-
+/* FORM */
 input,select,textarea{
 width:100%;
-padding:14px;
+padding:12px;
 margin:8px 0;
 border-radius:10px;
 border:none;
@@ -68,31 +97,22 @@ border:none;
 
 button{
 width:100%;
-padding:15px;
-border-radius:10px;
-border:none;
+padding:14px;
 background:#d4af37;
+border:none;
+border-radius:10px;
 font-weight:bold;
 cursor:pointer;
 }
 
-.badge{
-background:#25D366;
-color:white;
-padding:8px 15px;
-border-radius:20px;
-font-size:13px;
-display:inline-block;
-margin-bottom:10px;
-}
-
-.urgent{
-color:#d4af37;
+/* CONTACT */
+.contact{
 text-align:center;
-margin-bottom:10px;
+line-height:2;
 }
 
-.whatsapp-float{
+/* WHATSAPP FLOAT */
+.whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
@@ -104,23 +124,21 @@ text-decoration:none;
 font-weight:bold;
 }
 
-footer{
-text-align:center;
-padding:30px;
-opacity:0.8;
-}
-
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero">
 <h1>Asia Henna</h1>
-<p>Luxury Henna Art in Charlotte, NC</p>
-</header>
+<p>Luxury Henna Art | Charlotte, NC</p>
+<a class="btn" href="#booking">Book Now</a>
+</div>
 
-<h2 class="section-title">Gallery</h2>
+<!-- GALLERY -->
+<section>
+<h2 class="title">Gallery</h2>
 
 <div class="gallery">
 <img src="IMG_9585.jpeg">
@@ -131,22 +149,21 @@ opacity:0.8;
 <img src="IMG_9590.jpeg">
 <img src="IMG_9592.jpeg">
 <img src="IMG_9593.jpeg">
-<img src="IMG_9594.jpeg">
-<img src="IMG_9595.jpeg">
 </div>
+</section>
 
-<h2 class="section-title">Pricing</h2>
+<!-- PRICING -->
+<section>
+<h2 class="title">Pricing</h2>
 
-<div class="price-box">Hand Henna - $25+</div>
-<div class="price-box">Leg Henna - $20+</div>
-<div class="price-box">Bridal Henna - Custom Quote</div>
+<div class="price">Hand Henna - $25+</div>
+<div class="price">Leg Henna - $20+</div>
+<div class="price">Bridal Henna - Custom Quote</div>
+</section>
 
-<h2 class="section-title">Request Booking</h2>
-
-<div class="booking">
-
-<div class="badge">⚡ Instant WhatsApp Booking Active</div>
-<div class="urgent">🔥 Limited availability — book early</div>
+<!-- BOOKING -->
+<section id="booking">
+<h2 class="title">Book Your Appointment</h2>
 
 <form onsubmit="sendBooking(event)">
 
@@ -164,25 +181,41 @@ opacity:0.8;
 <input type="date" id="date" required>
 <input type="time" id="time" required>
 
-<textarea id="message" placeholder="Notes"></textarea>
+<textarea id="message" placeholder="Message"></textarea>
 
 <button type="submit">Send Booking Request</button>
 
 </form>
-</div>
+</section>
 
-<footer>
-Asia Henna ❤️ | Charlotte, NC<br>
-📞 704-661-6428<br>
-📧 asia.henna247@gmail.com
+<!-- CONTACT -->
+<section class="contact">
+<h2 class="title">Contact</h2>
+
+📞 <a href="tel:+19806132634" style="color:white;">(980) 613-2634</a><br>
+📧 <a href="mailto:asia.henna247@gmail.com" style="color:white;">asia.henna247@gmail.com</a><br>
+
+📸 <a href="https://www.instagram.com/hen_nabyqueen_11" target="_blank" style="color:#d4af37;">
+@hen_nabyqueen_11
+</a>
+
+<br><br>
+📍 Charlotte, North Carolina
+</section>
+
+<!-- FOOTER -->
+<footer style="text-align:center;padding:30px;opacity:0.7;">
+Asia Henna ❤️
 </footer>
 
-<a class="whatsapp-float"
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp"
 href="https://wa.me/17046616428?text=Hi%20I%20want%20to%20book%20henna"
 target="_blank">
 WhatsApp
 </a>
 
+<!-- SCRIPT -->
 <script>
 function sendBooking(e){
 e.preventDefault();
@@ -195,18 +228,15 @@ let time=document.getElementById("time").value;
 let message=document.getElementById("message").value;
 
 let text=
-`✨ Asia Henna Booking Request ✨%0A%0A
+`New Henna Booking:%0A
 Name: ${name}%0A
 Phone: ${phone}%0A
 Service: ${service}%0A
 Date: ${date}%0A
 Time: ${time}%0A
-Notes: ${message}`;
+Message: ${message}`;
 
-window.open(
-"https://wa.me/17046616428?text=" + text,
-"_blank"
-);
+window.open("https://wa.me/17046616428?text="+text,"_blank");
 }
 </script>
 
