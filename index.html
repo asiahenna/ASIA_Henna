@@ -1,203 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asia Henna | Charlotte NC</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#120806;
-color:white;
-}
-
-/* HERO */
-.hero{
-text-align:center;
-padding:60px 20px;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
-url("IMG_9585.jpeg");
-background-size:cover;
-background-position:center;
-}
-
-.hero h1{
-font-size:50px;
-color:#d4af37;
-margin:0;
-}
-
-.hero p{
-font-size:18px;
-}
-
-/* SECTIONS */
-section{
-padding:50px 20px;
-max-width:1000px;
-margin:auto;
-}
-
-.title{
-text-align:center;
-color:#d4af37;
-font-size:30px;
-}
-
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:10px;
-}
-
-.gallery img{
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:12px;
-}
-
-/* PRICE BOX */
-.price{
-background:#1b0d09;
-padding:15px;
-margin:10px 0;
-border-radius:10px;
-}
-
-/* FORM */
-input,select,textarea{
-width:100%;
-padding:12px;
-margin:8px 0;
-border-radius:10px;
-border:none;
-}
-
-button{
-width:100%;
-padding:15px;
-background:#d4af37;
-border:none;
-border-radius:10px;
-font-weight:bold;
-cursor:pointer;
-}
-
-/* CONTACT */
-.contact{
-text-align:center;
-line-height:2;
-}
-
-a{
-color:#d4af37;
-}
-</style>
-</head>
-
-<body>
-
-<div class="hero">
-<h1>Asia Henna</h1>
-<p>Luxury Henna Art | Charlotte, NC</p>
-</div>
-
-<!-- PRICING -->
 <section>
-<h2 class="title">Pricing</h2>
+<h2 class="title">Book / Custom Request</h2>
 
-<div class="price">
-<b>Hand Henna:</b> $34.99 <br>
-First-time: $29.99
-</div>
+<p style="text-align:center;opacity:0.8;">
+Custom designs welcome — upload an image or describe your idea for pricing.
+</p>
 
-<div class="price">
-<b>Leg Henna:</b> $39.99 <br>
-First-time: $34.99
-</div>
-</section>
+<form action="https://formsubmit.co/asia.henna247@gmail.com"
+method="POST"
+enctype="multipart/form-data">
 
-<!-- GALLERY -->
-<section>
-<h2 class="title">Gallery</h2>
+<!-- 🔒 security -->
+<input type="hidden" name="_captcha" value="false">
 
-<div class="gallery">
-<img src="IMG_9585.jpeg">
-<img src="IMG_9586.jpeg">
-<img src="IMG_9587.jpeg">
-<img src="IMG_9588.jpeg">
-<img src="IMG_9589.jpeg">
-<img src="IMG_9590.jpeg">
-</div>
-</section>
+<!-- ✅ AUTO EMAIL TO CUSTOMER -->
+<input type="hidden" name="_autoresponse"
+value="✨ Thank you for booking Asia Henna! We received your request and will confirm your appointment shortly. ✨">
 
-<!-- BOOKING -->
-<section>
-<h2 class="title">Book Appointment</h2>
+<!-- optional redirect after submit -->
+<input type="hidden" name="_next"
+value="https://asiahennna.github.io/thankyou.html">
 
-<form id="bookingForm">
+<input type="text" name="Name" placeholder="Your Name" required>
 
-<input id="name" placeholder="Your Name" required>
-<input id="phone" placeholder="Phone Number" required>
+<input type="text" name="Phone" placeholder="Phone Number" required>
 
-<select id="service">
+<input type="email" name="Email" placeholder="Your Email (for confirmation)" required>
+
+<select name="Service" required>
+<option value="">Select Service</option>
 <option>Hand Henna</option>
 <option>Leg Henna</option>
 <option>Custom Design</option>
 </select>
 
-<input type="date" id="date" required>
-<input type="time" id="time" required>
+<input type="date" name="Date" required>
+<input type="time" name="Time" required>
 
-<textarea id="message" placeholder="Custom request / design idea / describe what you want"></textarea>
+<textarea name="Details"
+placeholder="Describe your design or request..."
+required></textarea>
 
-<button type="submit">Send Request</button>
+<label style="display:block;margin-top:10px;">
+Upload Reference Image (optional)
+</label>
+
+<input type="file" name="Attachment" accept="image/*">
+
+<br><br>
+
+<button type="submit">
+Send Booking Request
+</button>
 
 </form>
 </section>
-
-<!-- CONTACT -->
-<section class="contact">
-<h2 class="title">Contact</h2>
-
-📞 (980) 613-2634 <br>
-📧 asia.henna247@gmail.com <br>
-
-📸 <a href="https://www.instagram.com/hen_nabyqueen_11" target="_blank">
-@hen_nabyqueen_11
-</a>
-
-</section>
-
-<script>
-document.getElementById("bookingForm").addEventListener("submit", function(e){
-e.preventDefault();
-
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let service=document.getElementById("service").value;
-let date=document.getElementById("date").value;
-let time=document.getElementById("time").value;
-let message=document.getElementById("message").value;
-
-let subject="New Henna Booking Request";
-
-let body=
-`Name: ${name}
-Phone: ${phone}
-Service: ${service}
-Date: ${date}
-Time: ${time}
-Message: ${message}`;
-
-window.location.href=
-`mailto:asia.henna247@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-});
-</script>
-
-</body>
-</html>
